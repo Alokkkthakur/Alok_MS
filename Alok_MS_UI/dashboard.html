@@ -1,0 +1,13 @@
+<script>
+const email = localStorage.getItem("userEmail");
+
+if (email) {
+    const part = email.split("@");
+    const userName = part[0];
+    document.getElementById("email").textContent =
+        "Welcome to Dashboard: " + userName;
+} else {
+    document.getElementById("email").textContent =
+        "Welcome to Dashboard";
+}
+</script>
